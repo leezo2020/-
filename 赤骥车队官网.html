@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赤骥车队 | CHIJI Racing Team</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+    }
+    header {
+      background-color: #b22222;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 6px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .intro {
+      background: linear-gradient(145deg, #b22222 0%, #000 100%);
+      text-align: center;
+    }
+    .intro h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      border: 2px solid #b22222;
+      border-radius: 8px;
+      transition: opacity 1s ease-in-out;
+    }
+    .sponsors {
+      background-color: #111;
+      text-align: center;
+    }
+    .sponsors img {
+      max-width: 100%;
+      height: auto;
+    }
+    .recruitment {
+      text-align: center;
+      background-color: #222;
+      padding: 40px 20px;
+    }
+    .recruitment h2 {
+      color: #b22222;
+    }
+    footer {
+      background: #111;
+      color: #777;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="赤骥车队 Logo">
+    <nav>
+      <a href="#about">关于我们</a>
+      <a href="#gallery">照片集锦</a>
+      <a href="#vehicles">赛车与成绩</a>
+      <a href="#recruit">加入我们</a>
+      <a href="#sponsors">合作伙伴</a>
+    </nav>
+  </header>
+
+  <section id="about" class="intro">
+    <h1>赤骥车队 CHIJI Racing Team</h1>
+    <h3 style="color:#ffcccc; font-weight:normal; margin-top:10px;">为赛车梦，不眠不休！</h3>
+    <p>
+      赤骥车队于2013年11月成立，是武汉科技大学第一支由在校本科生和研究生组建而成的大学生方程式赛车设计制作团队。
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2 style="text-align:center;color:#b22222;">📸 照片展示</h2>
+    <div class="carousel">
+      <img id="carousel-image" src="photo1.jpg" alt="照片展示">
+    </div>
+  </section>
+
+  <section id="vehicles">
+    <h2 style="text-align:center;color:#b22222;">🏎️ 赛车与成绩</h2>
+    <p style="max-width:800px;margin:0 auto;text-align:center;">
+      赤骥车队自主研发多款电动方程式赛车，连续多年参加中国大学生方程式系列赛事（FSC, FSEC, Baja SAE），取得优异成绩。
+      在2023年电车比赛中，赤骥车队取得电动组耐久赛完赛、电驱系统设计优秀奖等佳绩，展现了优秀的工程实力与团队协作能力。
+      在2022年巴哈比赛中，赤骥车队取得全国第五名的优异成绩。
+    </p>
+  </section>
+
+  <section id="recruit" class="recruitment">
+    <h2>📢 加入赤骥车队</h2>
+    <p>
+      键盘敲代码？笔尖画图纸？还是动手造一辆真正的赛车？<br>
+      课本装不下你的速度野心？<br>
+      赤骥车队为你提供大展宏图的机会！
+    </p>
+    <p>👇扫码加入我们</p>
+    <img src="erweima.jpg" alt="招新二维码" width="160" style="margin-top:10px;border:2px solid white;border-radius:8px">
+  </section>
+
+  <section id="sponsors" class="sponsors">
+    <h2 style="color:#b22222;">💼 合作伙伴 / 赞助商</h2>
+    <img src="sponsors.jpg" alt="赞助商墙">
+  </section>
+
+  <footer>
+    © 2025 赤骥车队 CHIJI Racing Team · 武汉科技大学<br>
+    联系我们：chj_racing@wust.edu.cn
+  </footer>
+
+  <script>
+    const images = [
+      'photo1.jpg',
+      'photo2.jpg',
+      'photo3.jpg',
+      'photo4.jpg',
+      'photo5.jpg',
+      'photo6.jpg',
+      'photo7.jpg',
+      'photo8.jpg'
+    ];
+    let index = 0;
+    const carousel = document.getElementById('carousel-image');
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      carousel.src = images[index];
+    }, 3000);
+  </script>
+</body>
+</html>
